@@ -1,0 +1,21 @@
+import discord
+from discord.ext import commands
+
+client = commands.Bot(command_prefix = "", self_bot = True, help_command = None)
+token = "#Ctrl+Shift+I -> Network Tab -> messages -> copy authorization token"
+
+@client.event
+async def on_ready():
+    print("Online!")
+
+@client.command()    
+async def Spam(ctx):
+    myid = '<@&role id>'
+    for i in range(104):
+        await ctx.send('revenge is sweet, isn\'t it %s ?' % myid)
+
+@client.command()
+async def revenge(ctx):
+    await ctx.send('')
+    
+   client.run(token, bot = False)
